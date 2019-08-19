@@ -12,7 +12,6 @@ class Student
   def self.all
     sql = <<-SQL
     SELECT * FROM students
-    WHERE grade = ?
     SQL
     DB[:conn].execute(sql)
 
