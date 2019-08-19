@@ -66,7 +66,6 @@ class Student
     SELECT * FROM
     students
     WHERE grade = ?
-    LIMIT x
     SQL
     DB[:conn].execute(sql,x).collect do |row|
     self.new_from_db(row)
