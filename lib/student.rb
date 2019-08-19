@@ -65,7 +65,7 @@ class Student
     sql = <<-SQL
     SELECT * FROM
     students
-    WHERE grade = 10
+    WHERE students.grade = 10
     LIMIT = ?
     SQL
     DB[:conn].execute(sql,x).collect do |row|
